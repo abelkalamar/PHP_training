@@ -1,0 +1,20 @@
+input {
+  padding: 5px;
+  margin: 10px;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.error {
+  color: red;
+}
+
+.valid {
+  color: green;
+}
+
+.result {
+  margin-bottom: 10px;
+}
