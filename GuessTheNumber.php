@@ -22,18 +22,28 @@ if (isset($_POST["submit"])) {
       $result = 'Your guess is too high!';
     } elseif ($guess == $_SESSION['guess']) {
       $result = 'Bingooo!';
-      unset($_SESSION['guess']);
     } else {
       $result = 'Your guess is too low!';
     }
   }
 }
+
+if (isset($_POST['newGame'])) {
+  unset($_SESSION['guess']);
+}
+
 ?>
 <h2>Number guessing</h2>
+
 <form method="POST">
   <label for="guess">Guess a number between 1 and 100:</label>
   <input type="number" name="guess">
   <button name="submit">Submit</button>
+  <?php if (isset($guess) && $guess == $_SESSION['guess']) { ?>
+    <div>
+      <button name="newGame">New Game</button>
+    </div>
+  <?php } ?>
   <div>
     <h3>
       <?php if ($result !== '') {
