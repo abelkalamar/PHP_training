@@ -20,6 +20,7 @@
       <textarea type="text" name="description"></textarea>
       <button type="submit" name="submit">Add</button>
       <button type="delete" name="delete">Clear All</button>
+      <!-- <button name="removeTodo">RemoveTodo</button> -->
     </form>
     <div class="todos">
       <h2>Recent To-Do-s</h2>

@@ -18,7 +18,15 @@ class Todo
     $this->isDone = $isDone;
   }
 
-  function __get($fieldName) {
+  function __get($fieldName)
+  {
     return $this->$fieldName;
+  }
+
+  function __set($fieldName, $value)
+  {
+    if (property_exists('Todo', $fieldName) && $value) {
+      $this->$fieldName = $value;
+    }
   }
 }

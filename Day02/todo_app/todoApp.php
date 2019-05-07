@@ -7,9 +7,6 @@ $importantThings = new TodoList("important");
 if (!isset($_SESSION['todolist'])) {
   $_SESSION['todolist'] = $importantThings;
 }
-// $importantThings->addNewTodo('Go climbing', 'Monkey Boulder, at 18:00');
-// $importantThings->addNewTodo('Go shopping', 'After climbing, but important before 22:00');
-// $importantThings->addNewTodo('Cooking', 'After shopping');
 
 if (isset($_POST['submit'])) {
   $title = $_POST['title'];
@@ -23,3 +20,7 @@ if (isset($_POST['delete'])) {
 }
 
 include 'views/todoListView.php';
+
+if (filter_has_var(INPUT_POST, "removeTodo")) {
+  echo 'okay';
+}

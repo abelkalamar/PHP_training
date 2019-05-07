@@ -50,11 +50,13 @@ h1 {
 
 .addTodo input:focus,
 .addTodo button:focus,
-.addTodo textarea:focus {
+.addTodo textarea:focus,
+div.singleTodo button:focus {
   outline: none;
 }
 
-.addTodo button {
+.addTodo button,
+div.singleTodo button {
   font-size: 15px;
   padding: 5px;
   font-weight: bold;
@@ -63,6 +65,10 @@ h1 {
   background-color: white;
   cursor: pointer;
   margin-top: 10px;
+}
+
+div.singleTodo button{
+  margin: 0;
 }
 
 .addTodo button:hover {
