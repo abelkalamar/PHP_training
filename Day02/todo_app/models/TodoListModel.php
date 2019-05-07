@@ -10,6 +10,7 @@ class TodoList
   function __construct($name)
   {
     $this->name = $name;
+    $this->todos = [];
   }
 
   function __get($fieldName)
@@ -19,6 +20,7 @@ class TodoList
 
   function addNewTodo($title, $description, $isDone = false)
   {
-    $this->todos[] = new Todo($title, $description, $isDone);
+    $todo = new Todo($title, $description, $isDone);
+    $this->todos[] = $todo;
   }
 }
