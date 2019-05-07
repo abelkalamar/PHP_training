@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.addTodo,
+.todos {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todos {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.addTodo input,
+.addTodo textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.addTodo textarea {
+  min-width: 200px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.addTodo label {
+  margin-top: 10px;
+}
+
+.addTodo input:focus,
+.addTodo button:focus,
+.addTodo textarea:focus {
+  outline: none;
+}
+
+.addTodo button {
+  font-size: 15px;
+  padding: 5px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.addTodo button:hover {
+  background-color: rgb(216, 216, 216);
+}
